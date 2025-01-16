@@ -1,0 +1,433 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+caption,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  cursor: context-menu;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+  font-family: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+  cursor: context-menu;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+  font-family: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+  cursor: context-menu;
+}
+
+blockquote,
+q {
+  font-family: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+  quotes: none;
+  cursor: context-menu;
+}
+blockquote:before, blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  outline: none;
+  border: 0;
+  font-family: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+}
+
+textarea {
+  line-height: 1.5;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  font-family: inherit;
+  cursor: context-menu;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-align: left;
+}
+table tr,
+table th,
+table td {
+  text-align: left;
+  vertical-align: middle;
+  cursor: context-menu;
+  font-size: inherit;
+  letter-spacing: inherit;
+}
+
+/*
+::-webkit-scrollbar {
+    width: 8px;
+    height: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #BFBFBF;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6c757d;
+}
+*/
+/*
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+}
+*/
+@font-face {
+  font-family: "Google sans";
+  src: url(".../font/Google-sans.woff2");
+}
+body * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body html {
+  font-size: 18px;
+}
+body *,
+body div,
+body p {
+  font-family: Google sans;
+  font-size: 1.1rem;
+}
+
+.mainContainer {
+  width: 800px;
+  margin: 32px auto;
+}
+.mainContainer .coverImgAndText {
+  position: relative;
+}
+.mainContainer .coverImgAndText img {
+  width: 100%;
+  border-radius: 12px;
+}
+.mainContainer .coverImgAndText .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  line-height: 1.5;
+}
+.mainContainer .coverImgAndText .text p {
+  color: white;
+}
+.mainContainer .coverImgAndText .text .h1 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+.mainContainer .box {
+  margin-top: 16px;
+  border-radius: 20px;
+  min-height: 300px;
+  background: #E8F0FE;
+  padding-bottom: 16px;
+}
+.mainContainer .box .navBar {
+  padding: 16px 16px 0;
+}
+.mainContainer .box .navBar ul {
+  display: flex;
+  gap: 16px;
+}
+.mainContainer .box .navBar ul li {
+  padding: 8px;
+  list-style: none;
+}
+.mainContainer .box .navBar ul li:hover {
+  cursor: pointer;
+  color: #007bff;
+}
+.mainContainer .box .navBar ul li.active {
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+}
+.mainContainer .box .subBox {
+  background-color: white;
+  border-radius: 20px;
+  padding: 16px;
+  margin: 16px;
+  min-height: 100px;
+  display: flex;
+}
+.mainContainer .box .subBox .form {
+  width: 50%;
+}
+.mainContainer .box .subBox .form .inputbox {
+  margin-bottom: 24px;
+  position: relative;
+}
+.mainContainer .box .subBox .form .inputbox label {
+  position: absolute;
+  top: 8px;
+  left: 9px;
+  transition: all 0.1s linear;
+  color: #737373;
+  pointer-events: none;
+}
+.mainContainer .box .subBox .form .inputbox input {
+  border: 1px solid #6c757d;
+  padding: 8px;
+  border-radius: 8px;
+  width: 100%;
+}
+.mainContainer .box .subBox .form .inputbox input:focus, .mainContainer .box .subBox .form .inputbox input:valid {
+  border: 2px solid #007bff;
+}
+.mainContainer .box .subBox .form .inputbox input:focus + label, .mainContainer .box .subBox .form .inputbox input:valid + label {
+  top: -9px;
+  left: 9px;
+  font-size: 0.8rem;
+  background: white;
+  padding: 0 4px;
+  font-weight: bold;
+  color: #007bff;
+}
+.mainContainer .box .subBox .form .predictBtn {
+  padding: 8px;
+  cursor: pointer;
+  background-color: #007bff;
+  outline: none;
+  border: 0;
+  color: white;
+  border-radius: 8px;
+  padding: 8px 16px;
+}
+.mainContainer .box .subBox .form .predictBtn:hover {
+  background: #0069da;
+}
+.mainContainer .box .subBox .resultBox {
+  border: 1px solid #6c757d;
+  width: 50%;
+  margin-left: 16px;
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+}
+.mainContainer .box .subBox .resultBox .txt1 {
+  font-size: 1.5rem;
+}
+.mainContainer .box .subBox .resultBox img {
+  max-width: 100%;
+  max-height: 112px;
+  display: none;
+}
+.mainContainer .box .subBox .form2 {
+  width: 50%;
+}
+.mainContainer .box .subBox .form2 .inputbox {
+  margin-bottom: 24px;
+  position: relative;
+}
+.mainContainer .box .subBox .form2 .inputbox .label {
+  margin-bottom: 8px;
+}
+.mainContainer .box .subBox .form2 .inputbox input {
+  border: 1px solid #6c757d;
+  padding: 8px;
+  border-radius: 8px;
+  width: 100%;
+}
+.mainContainer .box .subBox .form2 .inputbox ul {
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0, rgba(60, 64, 67, 0.15) 0 2px 6px 2px;
+  border-radius: 8px;
+  position: absolute;
+  background-color: white;
+  z-index: 2;
+  overflow-y: auto;
+  max-height: 300px;
+  width: 100%;
+  display: none;
+}
+.mainContainer .box .subBox .form2 .inputbox ul li {
+  padding: 8px 16px;
+  border-bottom: 1px solid #F2F2F2;
+}
+.mainContainer .box .subBox .form2 .inputbox ul li:hover {
+  background-color: #E8F0FE;
+  cursor: pointer;
+}
+.mainContainer .box .subBox .form2 .predictBtn {
+  padding: 8px;
+  cursor: pointer;
+  background-color: #007bff;
+  outline: none;
+  border: 0;
+  color: white;
+  border-radius: 8px;
+  padding: 8px 16px;
+}
+.mainContainer .box .subBox .form2 .predictBtn:hover {
+  background: #0069da;
+}
+.mainContainer .box .subBox .resultBox2 {
+  border: 1px solid #6c757d;
+  width: 50%;
+  margin-left: 16px;
+  padding: 16px;
+  border-radius: 8px;
+}
+.mainContainer .box .subBox .resultBox2 .h1 {
+  background-color: #007bff;
+  color: white;
+  padding: 8px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.mainContainer .box .subBox .resultBox2 .txt {
+  line-height: 2;
+  text-align: center;
+}/*# sourceMappingURL=main.css.map */
